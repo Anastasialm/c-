@@ -33,7 +33,7 @@ metod(a);
 // Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 void metod(int number)
 {
-    if (number<5)
+    if (number<6)
         Console.WriteLine("нет");
     else
         Console.WriteLine("да");
