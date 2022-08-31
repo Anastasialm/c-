@@ -21,7 +21,7 @@ void metod(double xA, double yA, double zA, double xB, double yB, double zB)
     side1 = xA-xB;
     side2 = yA-yB;
     side3 = zA-zB;
-    Console.WriteLine(Math.Sqrt(Math.Pow(side1,2)+Math.Pow(side2,2)+Math.Pow(side3,2)));
+    Console.WriteLine(Math.Round(Math.Sqrt(Math.Pow(side1,2)+Math.Pow(side2,2)+Math.Pow(side3,2)),2));
 }
 Console.WriteLine("Введите координату X точки А");
 double xA = Convert.ToDouble(Console.ReadLine());
