@@ -143,13 +143,13 @@ void printArr(int [ , ] Arr)
 }
 void number ( int [,] Arr)
 {
-    Console.Write($"Введите позицию элемента | строка : ");
+    Console.Write($"Введите позицию элемента | номер строки : ");
     int a = Convert.ToInt32(Console.ReadLine());
-    Console.Write($"Введите позицию элемента | столбец : ");
+    Console.Write($"Введите позицию элемента | номер столбца : ");
     int b = Convert.ToInt32(Console.ReadLine());
     if (a>Arr.GetLength(0)) Console.WriteLine("Такого элемента нет");
     else if(b>Arr.GetLength(1)) Console.WriteLine("Такого элемента нет");
-            else Console.WriteLine($"На позиции {a},{b} находится элемент {Arr[a,b]}");
+            else Console.WriteLine($"На позиции {a},{b} находится элемент {Arr[a-1,b-1]}");
 }
 Console.Write("Введите количество строк в массиве: ");
 int rows = Convert.ToInt32(Console.ReadLine());
