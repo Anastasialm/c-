@@ -52,13 +52,13 @@ void printArr(int [ , ] Arr)
 }
 void number ( int [,] Arr)
 {
-    Console.Write($"Введите позицию элемента | строка : ");
+    Console.Write($"Введите позицию элемента | номер строки : ");
     int a = Convert.ToInt32(Console.ReadLine());
-    Console.Write($"Введите позицию элемента | столбец : ");
+    Console.Write($"Введите позицию элемента | номер столбца : ");
     int b = Convert.ToInt32(Console.ReadLine());
     if (a>Arr.GetLength(0)) Console.WriteLine("Такого элемента нет");
     else if(b>Arr.GetLength(1)) Console.WriteLine("Такого элемента нет");
-            else Console.WriteLine($"На позиции {a},{b} находится элемент {Arr[a,b]}");
+            else Console.WriteLine($"На позиции {a},{b} находится элемент {Arr[a-1,b-1]}");
 }
 Console.Write("Введите количество строк в массиве: ");
 int rows = Convert.ToInt32(Console.ReadLine());
@@ -122,44 +122,3 @@ Console.WriteLine();
 printArr(array);
 Console.Write("Среднее арифметическое каждого столбца: "); mean(array);
 */
-
-int [ , ] createRandom2Array(int rows, int columns, int minValue, int maxValue)
-{
-    int[ , ] Array = new int [ rows, columns ];
-    for(int i=0; i<rows; i++)
-        for(int j=0; j<columns; j++)
-            Array[i,j] = new Random().Next(minValue, maxValue);
-    return Array;
-}
-void printArr(int [ , ] Arr)
-{
-    for(int i = 0; i < Arr.GetLength(0); i++)
-    {   
-        for(int j=0; j<Arr.GetLength(1); j++)
-            Console.Write(Arr[i , j] + "  ");
-        Console.WriteLine();
-    }
-    Console.WriteLine();
-}
-void number ( int [,] Arr)
-{
-    Console.Write($"Введите позицию элемента | номер строки : ");
-    int a = Convert.ToInt32(Console.ReadLine());
-    Console.Write($"Введите позицию элемента | номер столбца : ");
-    int b = Convert.ToInt32(Console.ReadLine());
-    if (a>Arr.GetLength(0)) Console.WriteLine("Такого элемента нет");
-    else if(b>Arr.GetLength(1)) Console.WriteLine("Такого элемента нет");
-            else Console.WriteLine($"На позиции {a},{b} находится элемент {Arr[a-1,b-1]}");
-}
-Console.Write("Введите количество строк в массиве: ");
-int rows = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите количество столбцов в массиве: ");
-int columns = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите минимальное значение элементов в массиве: ");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите максимальное значение элементов в массиве: ");
-int max = Convert.ToInt32(Console.ReadLine());
-int [ , ] array= createRandom2Array(rows, columns, min, max);
-Console.WriteLine();
-printArr(array);
-number(array);
